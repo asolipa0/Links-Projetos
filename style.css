@@ -1,0 +1,176 @@
+:root {
+  --primary-color: #FF0000;
+  --primary-hover: #2eb6aa;
+  
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== DARK THEME ======== */
+
+body.dark-theme {
+  --bg-color: black;
+  --text-color: white;
+}
+
+/* ======== ======== */
+
+body {
+  height: calc(100vh - 40px);
+  background-color: var(--bg-color);
+
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+}
+
+main {
+  max-width: 300px;
+
+  margin-inline: auto;
+  margin-top: 40px;
+
+  text-align: center;
+}
+
+#photo {
+  width: 105px;
+
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  padding: 3.7px;
+
+  transition: 400ms;
+}
+
+#photo:hover {
+  width: 140px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 38px;
+  font-family: 'Oswald', sans-serif;
+
+  margin: 24px 0 14px;
+}
+
+header p {
+  font-size: 16px;
+
+  opacity: 0.8;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  height: 50px;
+  padding: 14px;
+  background-color: var(--primary-color);
+
+  border-radius: 6px;
+
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+
+  transition: 400ms;
+}
+
+ul li a:hover {
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary-hover);
+  cursor: pointer;
+}
+
+/* === THEME BUTTONS === */
+
+.themes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  height: 30px;
+
+  margin-bottom: 15px;
+}
+
+.themes #light-sun{
+  display: none;
+}
+
+.themes #dark-moon {
+  transition: 400ms;
+}
+
+.themes #dark-moon:hover {
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+}
+
+body.dark-theme #dark-moon {
+  display: none;
+}
+
+body.dark-theme .themes #light-sun {
+  display: initial;
+
+  transition: 400ms;
+}
+
+body.dark-theme .themes #light-sun:hover {
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+}
+
+/* ====== ====== */
+
+footer {
+  font-size: 12px;
+  line-height: 16px;
+
+  opacity: 0.6;
+  transition: opacity 400ms;
+
+  color: var(--text-color);
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-color);
+}
